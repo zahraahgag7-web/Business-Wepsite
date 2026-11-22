@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#dae2fd", "on-primary-fixed": "#00174b", "on-surface-variant": "#434655", "on-tertiary-container": "#e1f2ff", "on-secondary-fixed": "#131b2e", "surface-container": "#e5eeff", "background": "#f8f9ff", "tertiary": "#005b7c", "primary-container": "#2563eb", "primary": "#004ac6", "surface-bright": "#f8f9ff", "on-tertiary": "#ffffff", "surface-tint": "#0053db", "error": "#ba1a1a", "on-secondary": "#ffffff", "surface-container-high": "#dce9ff", "primary-fixed-dim": "#b4c5ff", "surface-dim": "#cbdbf5", "outline": "#737686", "on-background": "#0b1c30", "tertiary-fixed": "#c4e7ff", "surface": "#f8f9ff", "surface-container-lowest": "#ffffff", "secondary-container": "#dae2fd", "outline-variant": "#c3c6d7", "on-primary": "#ffffff", "on-error": "#ffffff", "on-secondary-fixed-variant": "#3f465c", "tertiary-fixed-dim": "#7bd0ff", "surface-variant": "#d3e4fe", "on-primary-container": "#eeefff", "surface-container-highest": "#d3e4fe", "on-tertiary-fixed-variant": "#004c69", "on-error-container": "#93000a", "secondary-fixed-dim": "#bec6e0", "inverse-surface": "#213145", "secondary": "#565e74", "inverse-on-surface": "#eaf1ff", "primary-fixed": "#dbe1ff", "on-surface": "#0b1c30", "on-tertiary-fixed": "#001e2c", "surface-container-low": "#eff4ff", "error-container": "#ffdad6", "tertiary-container": "#00759f", "on-primary-fixed-variant": "#003ea8", "inverse-primary": "#b4c5ff", "on-secondary-container": "#5c647a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin": "3rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem", "space-md": "1rem" }, "fontFamily": { "headline-xl": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"], "title-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-md": ["Inter"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"] }, "fontSize": { "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md flex flex-col min-h-screen relative"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-on-primary px-gutter-mobile py-space-xs flex items-center justify-between text-label-sm font-label-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">mail</span><span class="truncate">contact@apexcorp.com</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">call</span><span>+1 (800) 849-2739</span></div></div><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><button aria-label="Open Navigation Menu" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container active:scale-95 transition-all" onclick="document.getElementById('mobile-drawer').classList.toggle('translate-x-full')" type="button"><span class="material-symbols-outlined text-2xl">menu</span></button><div class="flex items-center gap-space-xs"><img alt="Apex Corp Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAdyVLeKQVZTcqfhi2IR3ApEsQ1J-hDYuZdQl0FUrmHC4u_sssLeexv20TKXPwCIDzO2LYc0gmktHP9pv98lkXCFl2qGjUxCw7FEFWb3bbzThCC5kN7KPVo1qu2ML1Jh8UqTrVHcrlbmGjCUXEUl2r_XuVdjPbifspoMSuSBSsZATZXyYwsTxDUkD7vu98o1asbRI08723VFAvEBw7aNl99QWNkujK6QN4mlDCqMkiN1g"/><span class="font-headline-sm text-title-md font-bold tracking-tight text-on-surface hidden xs:inline">APEXCORP</span></div></div><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-title-md font-bold text-on-surface truncate max-w-[120px] hidden sm:block">Services</span><a class="h-11 px-space-md flex items-center justify-center gap-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container active:scale-95 transition-all shadow-sm" data-path="quote-request" href="#"><span class="material-symbols-outlined text-[18px]">request_quote</span><span>Quote</span></a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQP4Vvit3oehDPO7uy-4o67dVJ9vYFMQ4ZcuzPh42kqsi5gJHJdtexh_foX4HVQO3HsJBQncqdPRhUnxF5feQpyMX10OjY6FRaso9mtDnaG_DCgYrla0yNKJV-8bOdT7VnAx_s5s-n7FYI7JKn__F3W70DI_AYCivz3hchnL8Eap05j9ZtUteevhkMPnWb6tdyhX1KtmEPLlXYjSkWhTY4CzZCPH5U953fwCdGX8gf"/></div></div></header><div class="fixed inset-y-0 right-0 w-80 max-w-[85vw] bg-surface-container-lowest z-[60] transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col pt-safe pb-safe" id="mobile-drawer"><div class="p-space-lg flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-xs"><img alt="Apex Corp Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAdyVLeKQVZTcqfhi2IR3ApEsQ1J-hDYuZdQl0FUrmHC4u_sssLeexv20TKXPwCIDzO2LYc0gmktHP9pv98lkXCFl2qGjUxCw7FEFWb3bbzThCC5kN7KPVo1qu2ML1Jh8UqTrVHcrlbmGjCUXEUl2r_XuVdjPbifspoMSuSBSsZATZXyYwsTxDUkD7vu98o1asbRI08723VFAvEBw7aNl99QWNkujK6QN4mlDCqMkiN1g"/><span class="font-headline-sm text-title-md font-bold text-on-surface">APEXCORP</span></div><button aria-label="Close Drawer" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full')" type="button"><span class="material-symbols-outlined">close</span></button></div><div class="flex-1 overflow-y-auto p-space-md flex flex-col gap-space-xs"><a class="h-12 px-space-md flex items-center gap-space-md rounded-lg text-on-surface font-label-md text-label-md hover:bg-surface-container" data-path="home" href="#" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full')"><span class="material-symbols-outlined text-primary">home</span>Home</a><a class="h-12 px-space-md flex items-center gap-space-md rounded-lg text-on-surface font-label-md text-label-md hover:bg-surface-container" data-path="about-us" href="#" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full')"><span class="material-symbols-outlined text-primary">corporate_fare</span>About Us</a><a class="h-12 px-space-md flex items-center gap-space-md rounded-lg text-on-surface font-label-md text-label-md hover:bg-surface-container" data-path="services" href="#" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full')"><span class="material-symbols-outlined text-primary">design_services</span>Services</a><a class="h-12 px-space-md flex items-center gap-space-md rounded-lg text-on-surface font-label-md text-label-md hover:bg-surface-container" data-path="portfolio" href="#" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full')"><span class="material-symbols-outlined text-primary">work</span>Portfolio</a><a class="h-12 px-space-md flex items-center gap-space-md rounded-lg text-on-surface font-label-md text-label-md hover:bg-surface-container" data-path="testimonials" href="#" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full')"><span class="material-symbols-outlined text-primary">reviews</span>Testimonials</a><a class="h-12 px-space-md flex items-center gap-space-md rounded-lg text-on-surface font-label-md text-label-md hover:bg-surface-container" data-path="contact" href="#" onclick="document.getElementById('mobile-drawer').classList.add('translate-x-full')"><span class="material-symbols-outlined text-primary">contact_support</span>Contact</a></div><div class="p-space-lg bg-surface-container-low flex flex-col gap-space-sm"><p class="text-body-sm font-body-sm text-on-surface-variant">Institutional advisory &amp; enterprise technology operations worldwide.</p><a class="h-11 w-full flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container" data-path="quote-request" href="#">Request Strategy Session</a></div></div><main class="flex flex-col relative w-full pt-16 bg-surface flex-grow"><div class="flex flex-col w-full">
+<!-- Header Banner Section -->
+<section class="px-gutter-mobile pt-space-md pb-space-lg flex flex-col gap-space-sm relative overflow-hidden">
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">WHAT WE DELIVER</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-on-surface">
+        Enterprise Services &amp; Solutions
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        We architect resilient digital infrastructure, bespoke executive strategies, and accelerated scale engines engineered to compound enterprise valuation and institutional operational agility.
+      </p>
+</div>
+<!-- Quick Stats Grid -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-1 shadow-sm">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">99.8%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SLA Deployment Reliability</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-1 shadow-sm">
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary">350+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Global Enterprise Engagements</span>
+</div>
+</div>
+</section>
+<!-- Interactive Filter Tabs -->
+<section class="sticky top-16 z-30 bg-surface/95 backdrop-blur-md py-space-xs px-gutter-mobile">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1" id="category-pills" role="tablist">
+<button aria-selected="true" class="category-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all duration-200 bg-primary text-on-primary shadow-sm" data-filter="all" role="tab" type="button">
+        All Services
+      </button>
+<button aria-selected="false" class="category-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all duration-200 bg-surface-container-low text-on-surface-variant hover:bg-surface-container" data-filter="strategy" role="tab" type="button">
+        Strategy
+      </button>
+<button aria-selected="false" class="category-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all duration-200 bg-surface-container-low text-on-surface-variant hover:bg-surface-container" data-filter="technology" role="tab" type="button">
+        Technology
+      </button>
+<button aria-selected="false" class="category-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all duration-200 bg-surface-container-low text-on-surface-variant hover:bg-surface-container" data-filter="growth" role="tab" type="button">
+        Marketing &amp; Growth
+      </button>
+<button aria-selected="false" class="category-btn whitespace-nowrap px-space-md py-space-xs rounded-full font-label-md text-label-md transition-all duration-200 bg-surface-container-low text-on-surface-variant hover:bg-surface-container" data-filter="operations" role="tab" type="button">
+        Operations
+      </button>
+</div>
+</section>
+<!-- Service Cards Stream -->
+<section class="px-gutter-mobile py-space-md flex flex-col gap-space-lg" id="services-grid">
+<!-- Card 1: Enterprise Strategy -->
+<article class="service-card flex flex-col bg-surface-container-lowest rounded-xl p-space-lg shadow-sm gap-space-md transition-all duration-300" data-category="strategy">
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Modern corporate boardroom with executive team reviewing holographic strategic growth charts, crisp cool architectural lighting with royal blue accents, high-end commercial corporate photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf3eCt-XTqm5nLvLuUDDtiCJmJrbt4dVci7enmLTcthj0jPxB_-9e_jJw-92FSoUIShtaqdlHNLxxUPJkPmlTJdFwbl85gsbwxvcT2KH2TsElM3vINxV_mjT7wwebMNsrGKn8KBUHvdwzlPjsXVZwJK1r3hibRTWdxlmZvjYBZOGBqBtFJtsAxBM8uIVtEKd8_LPddwhTtrrk6aiP8hV1XqWh9iiJGeXSCKLWh-KuU"/>
+<span class="absolute top-space-sm left-space-sm px-space-sm py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest/90 backdrop-blur-md text-primary font-bold">
+          Strategy &amp; Advisory
+        </span>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-2xl">account_balance</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Enterprise Strategy &amp; Advisory</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">High-stakes commercial roadmapping and capital allocation governance.</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        We partner with C-suites and boards to navigate aggressive market disruption, execute post-merger integration, and build sovereign data moats for defensible enterprise valuation.
+      </p>
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Key Deliverables</span>
+<ul class="flex flex-col gap-space-xs text-body-sm font-body-sm text-on-surface">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Comprehensive 3-Year Capital Allocation Roadmap</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Macro Risk Mitigation &amp; Regulatory Hedging Matrix</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Board-level M&amp;A Architecture &amp; Due Diligence Audits</span>
+</li>
+</ul>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span class="font-label-sm text-label-sm">4 - 8 Weeks Engagement</span>
+</div>
+<a class="h-10 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-space-xs hover:bg-primary-container active:scale-95 transition-all shadow-sm" data-path="quote-request" href="#">
+<span>Request Quote</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 2: Digital Product & Cloud Engineering -->
+<article class="service-card flex flex-col bg-surface-container-lowest rounded-xl p-space-lg shadow-sm gap-space-md transition-all duration-300" data-category="technology">
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Cloud data center servers glowing with clean electric blue LED indicators, ultra-modern server blades in deep navy rack with depth of field blur, pristine enterprise cloud architecture photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5cHnLUFR_zwTeArPNITDrq2tIx7Edikvgorq_S9D6iR8uL93gnwNS0u7XItHEls324YSfQX0Oy3UpNy_7PGB7Mu7Wct_gy0rA2zV4Z1UCynk5ya1Q9U3LzWQFBVPI8s0t_r_r1qWLy2JcpH7luqPx2CqKyHje8DWNGn48eyt44j4mP9wY4_i3_Qw5wHBhe8GcDXMQ0OnNFy4I1yixi8PrRgOeymny0jK6DuS3LfZ-"/>
+<span class="absolute top-space-sm left-space-sm px-space-sm py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest/90 backdrop-blur-md text-primary font-bold">
+          Cloud Engineering
+        </span>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-2xl">cloud_sync</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Digital Product &amp; Cloud Engineering</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Modern multi-cloud architecture, serverless pipelines, and web applications.</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        We replace legacy enterprise bottlenecks with hyper-scalable, microservices-driven ecosystems engineered for zero downtime, multi-region failover, and millisecond response times.
+      </p>
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Key Deliverables</span>
+<ul class="flex flex-col gap-space-xs text-body-sm font-body-sm text-on-surface">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Microservices Cloud Migration (AWS / Azure / GCP)</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Continuous Delivery (CI/CD) GitOps Engine &amp; IaC</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Enterprise SDKs, Rest &amp; GraphQL API Frameworks</span>
+</li>
+</ul>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span class="font-label-sm text-label-sm">8 - 16 Weeks Sprint</span>
+</div>
+<a class="h-10 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-space-xs hover:bg-primary-container active:scale-95 transition-all shadow-sm" data-path="quote-request" href="#">
+<span>Request Quote</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 3: Brand Experience & Visual Design -->
+<article class="service-card flex flex-col bg-surface-container-lowest rounded-xl p-space-lg shadow-sm gap-space-md transition-all duration-300" data-category="growth">
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="High-end design studio displaying clean corporate visual identity books, modern UI design tokens and typography swatches on pristine oak surface with sharp daylight shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD340yFT08aR-bfSxf9H0MX0vHasegFMovYWZHjubgV9whb0EHXhIWKlFgp5zVyaO19YMe791eZqLfqZfeLrhLHuJbhEtQyJeUishCryAiGM2XHljhpl2tShQP_NtLdxBSCZLQJWtlZ9RXZ3dym5a2enN_bRwOxK0SlZ0qfzB587PUi7Yx_3iDyyoiRg1a2qVZEYYYSI-IHb38wP5k1yPHYjKE9iHYCzokcNXz9PqSb"/>
+<span class="absolute top-space-sm left-space-sm px-space-sm py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest/90 backdrop-blur-md text-primary font-bold">
+          Brand &amp; Experience
+        </span>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-2xl">draw</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Brand Experience &amp; Visual Design</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Institutional rebrands, digital design systems, and cross-platform UX.</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Elevate stakeholder perception with an authoritative visual signature. We craft bespoke typography hierarchies, design systems, and frictionless conversion interfaces that command market authority.
+      </p>
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Key Deliverables</span>
+<ul class="flex flex-col gap-space-xs text-body-sm font-body-sm text-on-surface">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Comprehensive Master Brand Guidelines &amp; Style Token Library</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Cross-platform Mobile &amp; Desktop Figma UI Kit</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Customer Journey Audits &amp; High-Fidelity Interactive Prototypes</span>
+</li>
+</ul>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span class="font-label-sm text-label-sm">6 - 10 Weeks Lifecycle</span>
+</div>
+<a class="h-10 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-space-xs hover:bg-primary-container active:scale-95 transition-all shadow-sm" data-path="quote-request" href="#">
+<span>Request Quote</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 4: Data Intelligence & AI Solutions -->
+<article class="service-card flex flex-col bg-surface-container-lowest rounded-xl p-space-lg shadow-sm gap-space-md transition-all duration-300" data-category="technology">
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Interactive glass cockpit screen visualizing enterprise artificial intelligence node clusters and machine learning models in navy and cobalt blue gradients, clean tech enterprise aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDao_Vj0c7Yesq9KAM2CxgdgI4ETeIn-uau1XTHV3ogbNEc3JXPaCnw5CRnNLNDdhsYw3f53n3zG-C4dKBKmTSOmzH0XNf8oaAhy_9UqY_jWaQPMxcQ3hGb3UrpQ8nnXmmJ7NZUTLQQX1I5oB7KF9zUOwccej9VjPaLnn_iXwaE9cG8Zj_6_wVfp2IFOGbmu435xJ26UETB2UMgwJ6oVH07dq622v8HP66tu2G8XLWJ"/>
+<span class="absolute top-space-sm left-space-sm px-space-sm py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest/90 backdrop-blur-md text-primary font-bold">
+          Data &amp; Artificial Intelligence
+        </span>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-2xl">neurology</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Data Intelligence &amp; AI Solutions</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Predictive machine learning models, custom LLM fine-tuning, and BI pipelines.</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Transform institutional data lakes into proactive profit centers. We design proprietary predictive pipelines, autonomous workflow automations, and executive BI cockpits tailored for rapid governance.
+      </p>
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Key Deliverables</span>
+<ul class="flex flex-col gap-space-xs text-body-sm font-body-sm text-on-surface">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Enterprise LLM Retrieval-Augmented Generation (RAG) Architecture</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Real-time Predictive Customer Lifetime Value &amp; Churn Engines</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Automated Snowflake / BigQuery Ingestion &amp; BI Dashboards</span>
+</li>
+</ul>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span class="font-label-sm text-label-sm">10 - 14 Weeks Milestone</span>
+</div>
+<a class="h-10 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-space-xs hover:bg-primary-container active:scale-95 transition-all shadow-sm" data-path="quote-request" href="#">
+<span>Request Quote</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 5: Cybersecurity & Compliance -->
+<article class="service-card flex flex-col bg-surface-container-lowest rounded-xl p-space-lg shadow-sm gap-space-md transition-all duration-300" data-category="operations">
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Digital security operations center with curved status screens showing zero trust threat monitoring in cool blue tones, professional enterprise security control room atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqugLFz_VrgaixQ_FTkgg_RjfcWxN-3EXrgUcogYA6G9j0svmYImEHSr0wbqa_sIUkYP24u3HOea0NItomC_dQZBGVufsqn9esFzWXCuO18tn68nP1N1f5KOlDgPVUIQ6fboYSdX226PXDhJ0jP8XizBbifZmhUB8e3YZyYke5bBhwXJuMq0OncwG3hg25ZdfAnBfsGxR90rTXSbDAxmJcwnhuOsSjlmlHYQ0ir7W0"/>
+<span class="absolute top-space-sm left-space-sm px-space-sm py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest/90 backdrop-blur-md text-primary font-bold">
+          Security &amp; Governance
+        </span>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-2xl">shield</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Cybersecurity &amp; Compliance</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero-trust network architecture, penetration testing, and SOC 2 / ISO certs.</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Defend sovereign capital and corporate reputational integrity with enterprise-grade defensive topology, red team stress simulations, and automated regulatory adherence pipelines.
+      </p>
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Key Deliverables</span>
+<ul class="flex flex-col gap-space-xs text-body-sm font-body-sm text-on-surface">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Zero-Trust Enterprise Perimeter Implementation</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Comprehensive Red Team Penetration &amp; Vulnerability Audit</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>SOC 2 Type II, HIPAA &amp; ISO 27001 Certification Readiness</span>
+</li>
+</ul>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span class="font-label-sm text-label-sm">4 - 12 Weeks Rollout</span>
+</div>
+<a class="h-10 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-space-xs hover:bg-primary-container active:scale-95 transition-all shadow-sm" data-path="quote-request" href="#">
+<span>Request Quote</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 6: Performance Marketing & Scale -->
+<article class="service-card flex flex-col bg-surface-container-lowest rounded-xl p-space-lg shadow-sm gap-space-md transition-all duration-300" data-category="growth">
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Strategic global commercial business analytics dashboard showing exponential hockey stick growth curve on tablet screen with high end glass and steel architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8kDjwa4TlbCffqqufvy-X5W_lgGvP7iykCqXtwIPIvNeiLJIcpv4bJg_l80A8RVuG1eieEYApAwiIRtaMYwV0QrNwsfqBGyOE5HAq3Dp_-6wtysKPvn7RL2gQ73SbK6fklZJLJp4K39GTIBXm1ZzyVN9IgFi39OmL0yQSQLxO3ptsMhX0cIXYpRDYmgqXHGb4LORJERkNDEmzHZPryT-mGlA38cUGurwl2xGOcfJi"/>
+<span class="absolute top-space-sm left-space-sm px-space-sm py-1 rounded-full font-label-sm text-label-sm bg-surface-container-lowest/90 backdrop-blur-md text-primary font-bold">
+          Scale &amp; Acquisition
+        </span>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-2xl">trending_up</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Performance Marketing &amp; Scale</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Institutional CAC/LTV arbitrage, omni-channel acquisition, and revenue ops.</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Drive predictable commercial expansion with data-backed customer acquisition. We orchestrate algorithmic paid campaigns, attribution modeling, and conversion rate engineering to maximize yield.
+      </p>
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Key Deliverables</span>
+<ul class="flex flex-col gap-space-xs text-body-sm font-body-sm text-on-surface">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Multi-Touch Attribution &amp; High-Velocity Conversion Funnel</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>International Paid Media Deployment (Search, Programmatic, Social)</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Automated Revenue Operations &amp; Retention Retargeting Engine</span>
+</li>
+</ul>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+<span class="font-label-sm text-label-sm">Ongoing / Retainer Sprint</span>
+</div>
+<a class="h-10 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-space-xs hover:bg-primary-container active:scale-95 transition-all shadow-sm" data-path="quote-request" href="#">
+<span>Request Quote</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</article>
+</section>
+<!-- Process Flow: How We Work Together -->
+<section class="px-gutter-mobile py-space-xl bg-surface-container-low my-space-md flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">schema</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">SYSTEMATIC DELIVERY</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">How We Work Together</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">A 4-stage operational blueprint engineered to eliminate implementation friction and guarantee institutional velocity.</p>
+</div>
+<div class="flex flex-col gap-space-md relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          1
+        </div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Discovery &amp; Audit</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Week 1-2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            In-depth operational audit, stakeholder interviews, technical telemetry analysis, and competitive vulnerability benchmarking.
+          </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          2
+        </div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Blueprint Architecture</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Week 3-4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Finalization of technical architecture specs, risk contingencies, resource allocation models, and milestone-backed SLAs.
+          </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          3
+        </div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Agile Execution</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Sprint Cycles</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Bi-weekly iterative deployments with automated testing, executive dashboard check-ins, and strict SLA compliance monitoring.
+          </p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center shrink-0">
+          4
+        </div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Scale &amp; Governance</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Ongoing</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Institutional knowledge transfer, enterprise team enablement, 24/7 telemetry monitoring, and proactive optimization.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Service FAQs Section -->
+<section class="px-gutter-mobile py-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">help</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">COMMERCIAL QUESTIONS</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Details regarding contractual governance, engagement models, and execution guarantees.</p>
+</div>
+<!-- Accordion Items -->
+<div class="flex flex-col gap-space-xs" id="faq-accordion">
+<!-- FAQ 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between gap-space-sm text-left hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)" type="button">
+<span class="font-title-md text-title-md font-bold text-on-surface">How are enterprise project quotes calculated?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform duration-200 faq-chevron">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+          Quotes are determined based on technical complexity, required enterprise integrations, data governance requirements, and accelerated delivery milestones. Every quote includes transparent resource allocation and SLA guarantees.
+        </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between gap-space-sm text-left hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)" type="button">
+<span class="font-title-md text-title-md font-bold text-on-surface">Do you support dedicated retainer and staff augmentation models?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform duration-200 faq-chevron">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+          Yes. In addition to fixed-scope commercial roadmaps, we deploy embedded specialized technical units (Principal Architects, Data Engineers, and Strategists) integrated directly into your existing organizational infrastructure.
+        </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between gap-space-sm text-left hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)" type="button">
+<span class="font-title-md text-title-md font-bold text-on-surface">What security standards are maintained during development?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform duration-200 faq-chevron">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+          All client infrastructure adheres to SOC 2 Type II standards, ISO 27001 guidelines, and complete zero-trust access controls. All confidential client data is governed under strict non-disclosure covenants and localized isolation partitions.
+        </div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between gap-space-sm text-left hover:bg-surface-container-low transition-colors" onclick="toggleFaq(this)" type="button">
+<span class="font-title-md text-title-md font-bold text-on-surface">What happens after deployment and rollout?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform duration-200 faq-chevron">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+          We provide a standard 90-day comprehensive operational warranty and transition support window, accompanied by 24/7 critical issue resolution SLAs and structured internal team enablement sessions.
+        </div>
+</div>
+</div>
+</section>
+<!-- CTA Card for Custom Commercial Packages -->
+<section class="px-gutter-mobile pt-space-md pb-space-xl">
+<div class="relative overflow-hidden rounded-xl bg-inverse-surface text-inverse-on-surface p-space-lg flex flex-col gap-space-md shadow-xl">
+<!-- Decorative background accent glow -->
+<div class="absolute -right-16 -top-16 w-52 h-52 rounded-full bg-primary/20 blur-3xl pointer-events-none"></div>
+<div class="flex items-center gap-space-xs text-primary-fixed">
+<span class="material-symbols-outlined text-2xl">handshake</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Bespoke Enterprise Mandates</span>
+</div>
+<div class="flex flex-col gap-space-xs relative z-10">
+<h2 class="font-headline-sm text-headline-sm font-bold text-inverse-on-surface">Need a Tailored Commercial Architecture?</h2>
+<p class="font-body-md text-body-md text-outline-variant">
+          Connect directly with our Lead Practice Directors for an expedited confidential capability review and preliminary architecture brief.
+        </p>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs relative z-10">
+<a class="h-12 w-full px-space-lg rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-space-xs hover:bg-primary-container active:scale-95 transition-all shadow-md" data-path="quote-request" href="#">
+<span>Schedule Executive Session</span>
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</a>
+<a class="h-12 w-full px-space-lg rounded-lg bg-surface-container-highest/20 text-inverse-on-surface font-label-md text-label-md flex items-center justify-center gap-space-xs hover:bg-surface-container-highest/30 active:scale-95 transition-all" href="tel:+18008492739">
+<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+<span>+1 (800) 849-2739</span>
+</a>
+</div>
+<div class="flex items-center justify-center gap-space-md pt-space-xs text-label-sm font-label-sm text-outline-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">lock</span>
+          Strict NDA
+        </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">bolt</span>
+          24h Response SLA
+        </span>
+</div>
+</div>
+</section>
+<!-- Client-side Interactive Filter & FAQ Controller -->
+<script>
+    // Tab Filter Logic
+    document.querySelectorAll('.category-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        
+        // Reset classes on buttons
+        document.querySelectorAll('.category-btn').forEach(btn => {
+          btn.setAttribute('aria-selected', 'false');
+          btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          btn.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+
+        // Activate clicked button
+        button.setAttribute('aria-selected', 'true');
+        button.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        button.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+
+        // Filter service cards
+        const cards = document.querySelectorAll('.service-card');
+        cards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Accordion Toggle
+    function toggleFaq(button) {
+      const content = button.nextElementSibling;
+      const chevron = button.querySelector('.faq-chevron');
+      const isExpanded = !content.classList.contains('hidden');
+
+      // Close all other FAQs
+      document.querySelectorAll('.faq-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.faq-chevron').forEach(el => el.classList.remove('rotate-180'));
+
+      // If it wasn't open, open it
+      if (!isExpanded) {
+        content.classList.remove('hidden');
+        chevron.classList.add('rotate-180');
+      }
+    }
+  </script>
+</div><footer class="w-full bg-surface-container-lowest text-on-surface mt-space-xl pb-28 pt-space-xl px-gutter-mobile shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg max-w-xl mx-auto"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><img alt="Apex Corp Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAdyVLeKQVZTcqfhi2IR3ApEsQ1J-hDYuZdQl0FUrmHC4u_sssLeexv20TKXPwCIDzO2LYc0gmktHP9pv98lkXCFl2qGjUxCw7FEFWb3bbzThCC5kN7KPVo1qu2ML1Jh8UqTrVHcrlbmGjCUXEUl2r_XuVdjPbifspoMSuSBSsZATZXyYwsTxDUkD7vu98o1asbRI08723VFAvEBw7aNl99QWNkujK6QN4mlDCqMkiN1g"/><span class="font-headline-sm text-headline-sm font-bold text-primary">APEXCORP</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">ApexCorp is a globally certified multi-disciplinary corporate platform delivering modern technical architecture, institutional strategic consulting, and bespoke enterprise infrastructure.</p></div><div class="flex flex-col gap-space-xs"><h4 class="font-title-md text-title-md font-bold text-on-surface">Global Presence</h4><div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary">location_on</span><span>New York: 575 5th Ave, 14th Floor, NY 10017</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary">location_on</span><span>London: 1 Canada Square, Canary Wharf, E14 5AA</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary">location_on</span><span>Singapore: 1 Raffles Place, #28-00, SG 048616</span></div></div></div><div class="flex flex-col gap-space-xs"><h4 class="font-title-md text-title-md font-bold text-on-surface">Executive Dispatch</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Subscribe for institutional reports and governance briefs.</p><div class="flex gap-space-xs mt-space-xs"><input class="flex-1 h-11 px-space-md rounded-lg bg-surface-container-lowest text-on-surface text-body-sm border border-outline-variant focus:outline-none focus:border-primary" placeholder="business@apexcorp.com" type="email"/><button class="h-11 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[18px]">send</span></button></div></div><div class="flex items-center justify-between pt-space-md border-t border-outline-variant/30 text-on-surface-variant"><div class="flex gap-space-sm"><a aria-label="Corporate LinkedIn" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a><a aria-label="Corporate Dispatch" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a aria-label="Institutional Verification" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high" href="#"><span class="material-symbols-outlined text-[20px]">verified</span></a></div><span class="font-label-sm text-label-sm text-on-surface-variant">© 2025 APEXCORP</span></div></div></footer></main><a aria-label="Chat on WhatsApp" class="fixed bottom-24 right-4 z-40 w-12 h-12 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg active:scale-95 transition-all" href="https://wa.me/18008492739" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-2xl">chat</span></a><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-gutter-mobile"><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-xl">home</span><span class="font-label-sm text-label-sm">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs w-14 h-11 transition-colors text-primary font-bold" data-path="services" href="#"><span class="material-symbols-outlined text-xl">design_services</span><span class="font-label-sm text-label-sm">Services</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#"><span class="material-symbols-outlined text-xl">work</span><span class="font-label-sm text-label-sm">Work</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="testimonials" href="#"><span class="material-symbols-outlined text-xl">reviews</span><span class="font-label-sm text-label-sm">Reviews</span></a><a class="flex flex-col items-center justify-center gap-space-xs w-14 h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#"><span class="material-symbols-outlined text-xl">mail</span><span class="font-label-sm text-label-sm">Contact</span></a></div></nav></body></html>
